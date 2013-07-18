@@ -1,0 +1,36 @@
+{
+    "name": "flower-ide",
+    "description": "An online interactive and multi-user editor to write, share and build applications.",
+    "version": "0.0.0",
+    "homepage": "",
+    "engines": {
+        "node": "0.10.12"
+    },
+    "author": "Daniel Rodríguez <sadasant@planobe.com.br>",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/planobe/flower-ide.git"
+    },
+    "dependencies": {
+        "connect-redis": "1.4.5",
+        "dryice": "0.4.10",
+        "express": "3.2.6",
+        "redis": "0.8.3",
+        "request": "2.21.0",
+        "share": "0.6.3",
+        "uglifycss": "0.0.5",
+        "uglify-js": "2.3.6"
+    },
+    "devDependencies": {
+        "mocha": "*",
+        "nock": "*",
+        "should": "*"
+    },
+    "licenses": [{
+        "type": "",
+        "url": ""
+    }],
+    "scripts": {
+        "test": "make test"
+    }
+}

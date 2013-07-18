@@ -1,0 +1,6 @@
+node_modules/
+npm-debug.log
+dump.rdb
+assets/css-min/*.css
+assets/js-min/*.js
+statics/*min*

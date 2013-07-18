@@ -1,0 +1,44 @@
+# Flower IDE
+
+## About
+
+An online interactive and multi-user editor to write, share and build applications.
+
+## Install
+
+Install nodejs:
+	http://nodejs.org/
+
+Clone the repo:
+
+    git clone git://github.com/planobe/flower-ide.git
+    cd flower-ide/
+
+Install all the npm dependencies:
+
+    npm install
+
+After that, wake up redis in another shell:
+
+    redis-server
+
+And finally, you can run the server:
+
+    ./Makefile.dryice.js
+	node index.js
+
+Then you can go to: <http://localhost:8888/sample.rb>
+
+## Update Ace
+
+Clone in another folder this project:
+<https://github.com/sadasant/ace/tree/planobe/posxml_demo_sharejs>
+work there, then copy the contents of `build/` inside this repo's
+`assets/ace-build/` folder.
+
+## Testing
+
+First, run `redis-server` in a separated terminal, and then test it
+with: `npm test`.
+
+_Peace ☮_

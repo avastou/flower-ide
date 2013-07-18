@@ -1,0 +1,161 @@
+/* vim: noai:ts=4:sw=4
+ */
+html {
+    height   : 100%;
+    width    : 100%;
+    overflow : hidden;
+}
+
+body {
+    overflow    : hidden;
+    margin      : 0;
+    padding     : 0;
+    height      : 100%;
+    width       : 100%;
+    font-family : Arial, Helvetica, sans-serif, Tahoma, Verdana, sans-serif;
+    font-size   : 12px;
+    background  : #333;
+    color       : white;
+}
+
+#logo {
+    padding     : 15px;
+    margin-left : 70px;
+}
+
+#chat-container {
+    position   : fixed;
+    right      : 0px;
+    background : #222;
+    width      : 200px;
+    display    : block;
+}
+
+#editor-container {
+    position   : absolute;
+    top        : 41px;
+    left       : 0px;
+    bottom     : 0px;
+    right      : 0px;
+    background : #333;
+}
+
+.navbar-inverse .navbar-inner .container .brand {
+  color : white;
+}
+
+.walkcompiler-compile {
+  position : absolute;
+  z-index  : 10000;
+  top      : 0;
+  right    : 0;
+  padding  : 5px;
+}
+.walkcompiler-compile > * {
+  float : left;
+}
+.walkcompiler-compile .alert {
+  line-height  : 12px;
+  margin-right : 5px;
+}
+.walkcompiler-compile #users {
+  margin-right  : 5px;
+  padding       : 5px 15px;
+  min-width     : 50px;
+  height        : 20px;
+}
+.walkcompiler-compile #users > * {
+  display        : inline-block;
+  vertical-align : middle;
+  line-height    : 20px;
+}
+.walkcompiler-compile #users .number-of-users {
+  margin-left : 5px;
+}
+
+#show-output {
+  position   : absolute;
+  bottom     : 15px;
+  right      : 22px;
+  background : transparent url('/img/max.png') no-repeat;
+  width      : 15px;
+  height     : 15px;
+  z-index    : 1000;
+  cursor     : pointer;
+}
+
+#hide-output {
+  display    : none;
+  float      : right;
+  background : transparent url('/img/min.png') no-repeat;
+  margin     : 3px;
+  width      : 15px;
+  height     : 15px;
+  z-index    : 1000;
+  cursor     : pointer;
+}
+
+#terminal-container {
+  position   : fixed;
+  bottom     : 0;
+  right      : 0;
+  height     : 0;
+  width      : 100%;
+  z-index    : 1000;
+  background : #000;
+}
+#terminal-container .terminal-element {
+  margin-top : 4px;
+}
+.terminal {
+  color            : rgb(240, 240, 240);
+  font-family      : Menlo,Monaco,"DejaVu Sans Mono",Consolas,"Andale Mono",monospace;
+  font-size        : 13px;
+  background-color : #000;
+  padding-top      : 0px;
+}
+.cmd .cursor {
+  background-color : rgb(240, 240, 240);
+}
+
+.remote_cursor {
+  position          : absolute;
+  width             : 1px;
+  height            : 10px;
+  /* border-left       : 2px solid red; */
+  /* background        : rgba(255,0,0,.2); */
+  -webkit-animation : blink 1s infinite cubic-bezier(1.0,0,0,1.0);
+  -moz-animation    : blink 1s infinite;
+  -o-animation      : blink 1s infinite;
+  -ms-animation     : blink 1s infinite;
+  animation         : blink 1s infinite;
+}
+
+.modal {
+  color : #444;
+}
+
+@-webkit-keyframes blink {
+  from { opacity : 1.0 }
+  to   { opacity : 0.0 }
+}
+
+@-moz-keyframes blink {
+  from { opacity : 1.0 }
+  to   { opacity : 0.0 }
+}
+
+@-o-keyframes blink {
+  from { opacity : 1.0 }
+  to   { opacity : 0.0 }
+}
+
+@-ms-keyframes blink {
+  from { opacity : 1.0 }
+  to   { opacity : 0.0 }
+}
+
+@keyframes blink {
+  from { opacity : 1.0 }
+  to   { opacity : 0.0 }
+}

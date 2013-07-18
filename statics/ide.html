@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Flower IDE</title>
+	<meta name="description" content="">
+
+	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+	<link href="./doc/site/images/favicon.ico" rel="icon" type="image/x-icon">
+	
+<!--DEVELOPMENT-->
+	<link rel="stylesheet" href="/css/lib/bootstrap.css"/>
+	<link rel="stylesheet" href="/css/lib/jquery.terminal.css"/>
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" charset="utf-8">
+<!--DEVELOPMENT--><!--PRODUCTION
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" charset="utf-8">
+PRODUCTION-->
+	<script async="true" src="http://use.edgefonts.net/source-code-pro.js"></script>
+
+</head>
+<body>
+
+	<!-- Nav Bar -->
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="brand">
+					Flower IDE
+				</div>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li>
+							<a href="#" id="help-keys-click">Keyboard shortcuts</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal With Keybinding helps -->
+	<div id="help-keys-modal" class="modal hide fade">
+		<div class="modal-header">
+			<button class="close">&times;</button>
+			<h3>Keyboard shortcuts</h3>
+		</div>
+		<div class="modal-body">
+			<p>
+				Below there is the list of custom keybindings
+				for <b>Flower IDE</b>, for more
+				keybindings, please visit
+				<a href="https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts" target="_blank">this website</a>.
+			</p>
+			<table class="table table-striped">
+				<tr>
+					<th style="width:20%;">Shortcut</th>
+					<th style="width:80%;">Action</th>
+				</tr>
+				<tr>
+					<td>Ctrl-b</td>
+					<td>Visualize the code.</td>
+				</tr>
+				<tr>
+					<td>Ctrl-m</td>
+					<td>Toggle the terminal window.</td>
+				</tr>
+				<tr>
+					<td>Ctrl-h</td>
+					<td>Fold or unfold the nearest fold.</td>
+				</tr>
+				<tr>
+					<td>Ctrl-j</td>
+					<td>Fold or unfold all the folds.</td>
+				</tr>
+			</table>
+		</div>
+		<div class="modal-footer" style="color:#666;">
+			Happy coding!
+			<span style="color:#999;">&mdash; Flower team.</span>
+		</div>
+	</div>
+
+	<div class="walkcompiler-compile">
+		<div id="connection-error" class="alert alert-error hide">
+			<b>Not good! </b>
+			We're not connected!
+		</div>
+		<div id="connection-success" class="alert alert-success hide">
+			<b>Excellent! </b>
+			We're connected!
+		</div>
+		<span id="users" class="label label-success">
+			<span>
+				<i class="icon-comment icon-white"></i>&nbsp;
+				Users:
+			</span>
+			<div class="number-of-users">1</div>
+		</span>
+		<a href="" class="btn btn-primary">Compile</a>
+	</div>
+
+	<div id="chat-container">
+		<div class="messages">
+			<div class="message"> Message 1 </div>
+			<div class="message"> Message 2 </div>
+		</div>
+		<div class="input">
+			<textarea id="" name="" cols="30" rows="10"></textarea>
+		</div>
+	</div>
+
+	<div id="editor-container"></div>
+	<div class="remote_cursor" style="display:none"></div>
+
+	<span id="show-output" class="toggle-output"></span>
+
+	<div id="terminal-container">
+		<span id="hide-output" class="toggle-output"></span>
+		<div class="terminal-element"></div>
+	</div>
+
+<!--DEVELOPMENT-->
+	<!-- Ace -->
+	<script src="src/ace.js" data-ace-base="src" type="text/javascript" charset="utf-8"></script>
+	<script src="src/theme-monokai.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		var ace = { require : require };
+	</script>
+
+	<!-- ShareJS -->
+	<script src="/channel/bcsocket.js"></script>
+	<script src="/share/share.js"></script>
+	<script src="/share/ace.js"></script>
+
+	<!-- jQuery and jQuery.terminal -->
+	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/lib/jquery.mousewheel.js"></script>
+	<script src="js/lib/jquery.terminal-0.6.3.min.js"></script>
+
+	<script src="js/ace.js"></script>
+	<script src="js/activity.js"></script>
+	<script src="js/compiler.js"></script>
+	<script src="js/events.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/terminal.js"></script>
+	<script src="js/utils.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		require("js/main");
+	</script>
+<!--DEVELOPMENT--><!--PRODUCTION
+	<script src="src/ace.js" data-ace-base="src" type="text/javascript" charset="utf-8"></script>
+	<script src="src/theme-monokai.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		var ace = { require : require };
+	</script>
+
+	<script src="/channel/bcsocket.js"></script>
+	<script src="/share/share.js"></script>
+	<script src="/share/ace.js"></script>
+
+	<script src="js/ide.js"></script>
+PRODUCTION-->
+
+</body>
+</html>
