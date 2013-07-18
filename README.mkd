@@ -1,5 +1,30 @@
 # Flower IDE
 
+													      __     __
+													    .'  `...'  `.
+													  __|     |     |__
+													.'    \   .   /    `.
+													|      ./###\.      |
+													 >---- |#####| ----<
+													|      `\###/'      |
+													`.__ /    .    \ __.'
+													   /|     |     |
+													  / `.___.^.___.'
+													 |
+													 |
+													 \
+													  \            )\
+													   ` .        /' \
+													      \      /'   )
+													       \    /'    /'
+													        \  /'    /'
+													         \(    /'
+													          )  /'
+													          | /'
+													          |(
+													          ||   _\|/_
+													========================
+
 ## About
 
 An online interactive and multi-user editor to write, share and build applications.
@@ -41,5 +66,3 @@ work there, then copy the contents of `build/` inside this repo's
 
 First, run `redis-server` in a separated terminal, and then test it
 with: `npm test`.
-
-_Peace ☮_
