@@ -36,18 +36,7 @@ define("js/terminal", function(require, exports, module) {
             return;
         }
         main.status.terminal_is_created = true;
-        main.terminal = main.$.terminal_element.terminal(function(command, term) {
-            main.terminal = term;
-            if (command === "compile") {
-                main.status.terminal_is_command = true;
-                main.$.compile.click();
-            } else
-            if (command === "clear") {
-                main.terminal.clear();
-            } else {
-                main.terminal.echo("Unknown command: " + command);
-            }
-        }, {
+        main.terminal = main.$.terminal_element.terminal("/json", {
             greetings : main.settings.terminal_greetings,
             name      : main.settings.terminal_name,
             height    : main.settings.terminal_height,
