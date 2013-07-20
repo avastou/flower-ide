@@ -53,7 +53,7 @@ And finally, you can run the server:
     ./Makefile.dryice.js
 	node index.js
 
-Then you can go to: <http://localhost:8888/sample.rb>
+Then you can go to: <http://localhost:8888/ide/sample.rb>
 
 ## Update Ace
 

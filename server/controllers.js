@@ -7,6 +7,33 @@ var controllers = {};
 var server;
 var options;
 
+var flower = 
+["<div style=\"width: 250px; margin: 0 auto;\"><pre>",
+"      __     __",
+"    .'  `...'  `.",
+"  __|     |     |__",
+".'    \\   .   /    `.",
+"|      ./###\\.      |",
+" >---- |#####| ----<",
+"|      `\\###/'      |",
+"`.__ /    .    \\ __.'",
+"   /|     |     |",
+"  / `.___.^.___.'",
+" |",
+" |",
+" \\",
+"  \\            )\\",
+"   ` .        /' \\",
+"      \\      /'   )",
+"       \\    /'    /'",
+"        \\  /'    /'",
+"         \\(    /'",
+"          )  /'",
+"          | /'",
+"          |(",
+"          ||   _\\|/_",
+"=======================</pre></div>"].join("\n");
+
 module.exports = function(_server, _options){
     server = _server;
     options = _options;
@@ -27,7 +54,8 @@ controllers.root = function(req, res, next){
     if (req.url !== "/") {
         return next();
     }
-    //res.redirect(301, "https://docs.cloudwalk.io/pt-BR/walk-compiler/web");
+	res.send(flower);
+    
 };
 
 // { ":docname" : {
@@ -182,7 +210,7 @@ function parseJSON(data) {
 
 // Not found
 controllers.notFound = function(req, res){
-    res.send(404);
+    res.send(flower);
 };
 
 function errorLog(req, message, data) {
