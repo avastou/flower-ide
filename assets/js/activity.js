@@ -25,7 +25,7 @@ define("js/activity", function(require, exports, module) {
 
     var ajax_object   = {
         type    : "POST",
-        url     : "/activity",
+        url     : "activity",
         data    : {},
         timeout : 3000,
         success : success,

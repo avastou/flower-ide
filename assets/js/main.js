@@ -105,7 +105,7 @@ define("js/main", [
 
     // Initializing ShareJS
     if (!(main.settings.docname && sharejs)) return;
-    sharejs.open(main.settings.docname, "text", "http://" + window.location.host + "/channel", function(error, doc) {
+    sharejs.open(main.settings.docname, "text", "http://" + window.location.host + "/ide/channel", function(error, doc) {
         doc.attach_ace(main.ace.editor);
     });
 

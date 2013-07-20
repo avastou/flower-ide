@@ -15,7 +15,7 @@ module.exports = function(_server, _options){
 
 // Log everything but activity calls (as they are too many)
 controllers.log = function(req, res, next){
-    if (!~req.url.indexOf("/activity")) {
+    if (!~req.url.indexOf("activity")) {
         var date = new Date().toISOString();
         console.log("%s FROM: %s %s %s", date, req.ip,  req.method, req.url);
     }

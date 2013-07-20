@@ -4,9 +4,9 @@ module.exports = function(server, options) {
     var controllers = require("./controllers")(server, options);
 
     server.use(controllers.log);
-    server.post("/activity", controllers.activity);
-    server.get("/compile", controllers.compile);
-    server.get("/:docname", controllers.edit);
-    server.use("/", controllers.root);
+    server.post("/ide/activity", controllers.activity);
+    server.get("/ide/compile", controllers.compile);
+    server.get("/ide/:docname", controllers.edit);
+    server.use("/ide", controllers.root);
     server.use(controllers.notFound);
 };

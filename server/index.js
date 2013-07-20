@@ -39,15 +39,15 @@ module.exports = function(main_dirname){
 server.configure(function(){
     server.use(express.cookieParser());
     server.use(express.bodyParser());
-    server.use("/img", express.static(path.normalize(__dirname + "/../assets/img")));
+    server.use("/ide/img", express.static(path.normalize(__dirname + "/../assets/img")));
 });
 
 // If NODE_ENV is not set,
 // let's use the long version of our custom ace.
 server.configure("development", function(){
-    server.use("/src", express.static(path.normalize(__dirname + "/../assets/ace-build/src")));
-    server.use("/css", express.static(path.normalize(__dirname + "/../assets/css")));
-    server.use("/js", express.static(path.normalize(__dirname + "/../assets/js")));
+    server.use("/ide/src", express.static(path.normalize(__dirname + "/../assets/ace-build/src")));
+    server.use("/ide/css", express.static(path.normalize(__dirname + "/../assets/css")));
+    server.use("/ide/js", express.static(path.normalize(__dirname + "/../assets/js")));
     server.use(express.session({
         secret : "k1X><?>>CJ9vXOJgWGwPbcsjVn=uV:zHvk8!geagC<nB<0aAAfX5C<5gmsB>",
         store  : options.session_store
@@ -56,9 +56,9 @@ server.configure("development", function(){
 
 // For testing purposes
 server.configure("test", function(){
-    server.use("/src", express.static(path.normalize(__dirname + "/../assets/ace-build/src")));
-    server.use("/css", express.static(path.normalize(__dirname + "/../assets/css")));
-    server.use("/js", express.static(path.normalize(__dirname + "/../assets/js")));
+    server.use("src", express.static(path.normalize(__dirname + "/../assets/ace-build/src")));
+    server.use("css", express.static(path.normalize(__dirname + "/../assets/css")));
+    server.use("js", express.static(path.normalize(__dirname + "/../assets/js")));
     server.use(express.session({
         secret : "k1X><?>>CJ9vXOJgWGwPbcsjVn=uV:zHvk8!geagC<nB<0aAAfX5C<5gmsB>",
         store  : options.session_store
@@ -68,9 +68,9 @@ server.configure("test", function(){
 // If NODE_ENV=staging
 // let's use the minified version of our custom ace.
 server.configure("staging", function(){
-    server.use("/src", express.static(path.normalize(__dirname + "/../assets/ace-build/src-min")));
-    server.use("/css", express.static(path.normalize(__dirname + "/../assets/css-min")));
-    server.use("/js", express.static(path.normalize(__dirname + "/../assets/js-min")));
+    server.use("src", express.static(path.normalize(__dirname + "/../assets/ace-build/src-min")));
+    server.use("css", express.static(path.normalize(__dirname + "/../assets/css-min")));
+    server.use("js", express.static(path.normalize(__dirname + "/../assets/js-min")));
     server.use(express.session({
         secret : "k1X><?>>CJ9vXOJgWGwPbcsjVn=uV:zHvk8!geagC<nB<0aAAfX5C<5gmsB>",
         // cookie : { secure : true },
@@ -81,9 +81,9 @@ server.configure("staging", function(){
 // If NODE_ENV=production
 // let's use the minified version of our custom ace.
 server.configure("production", function(){
-    server.use("/src", express.static(path.normalize(__dirname + "/../assets/ace-build/src-min")));
-    server.use("/css", express.static(path.normalize(__dirname + "/../assets/css-min")));
-    server.use("/js", express.static(path.normalize(__dirname + "/../assets/js-min")));
+    server.use("src", express.static(path.normalize(__dirname + "/../assets/ace-build/src-min")));
+    server.use("css", express.static(path.normalize(__dirname + "/../assets/css-min")));
+    server.use("js", express.static(path.normalize(__dirname + "/../assets/js-min")));
     server.use(express.session({
         secret : "k1X><?>>CJ9vXOJgWGwPbcsjVn=uV:zHvk8!geagC<nB<0aAAfX5C<5gmsB>",
         // cookie : { secure : true },
@@ -106,5 +106,5 @@ module.exports = {
 };
 module.exports.server = server.listen(port, function(){
     var env_msg = process.env.NODE_ENV ? process.env.NODE_ENV + " " : "";
-    console.log(env_msg + "server running at http://127.0.0.1:" + port + "/");
+    console.log(env_msg + "server running at http://127.0.0.1:" + port + "/ide");
 });
