@@ -77,7 +77,7 @@ body {
   position   : absolute;
   bottom     : 15px;
   right      : 22px;
-  background : transparent url('img/max.png') no-repeat;
+  background : transparent url('/ide/img/max.png') no-repeat;
   width      : 15px;
   height     : 15px;
   z-index    : 1000;
@@ -87,7 +87,7 @@ body {
 #hide-output {
   display    : none;
   float      : right;
-  background : transparent url('img/min.png') no-repeat;
+  background : transparent url('/ide/img/min.png') no-repeat;
   margin     : 3px;
   width      : 15px;
   height     : 15px;

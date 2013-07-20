@@ -41,7 +41,7 @@ define("js/main", [
     // stored in the settings.
     // access_token and app_id are parsed from the query string
     // below.
-    main.settings.docname      = pathname.substr(1);
+    main.settings.docname      = pathname.substr(5);
     main.settings.access_token = undefined;
     main.settings.app_id       = undefined;
 
@@ -105,7 +105,7 @@ define("js/main", [
 
     // Initializing ShareJS
     if (!(main.settings.docname && sharejs)) return;
-    sharejs.open(main.settings.docname, "text", "http://" + window.location.host + "/ide/channel", function(error, doc) {
+    sharejs.open(main.settings.docname, "text", function(error, doc) {
         doc.attach_ace(main.ace.editor);
     });
 

@@ -56,9 +56,9 @@ server.configure("development", function(){
 
 // For testing purposes
 server.configure("test", function(){
-    server.use("src", express.static(path.normalize(__dirname + "/../assets/ace-build/src")));
-    server.use("css", express.static(path.normalize(__dirname + "/../assets/css")));
-    server.use("js", express.static(path.normalize(__dirname + "/../assets/js")));
+    server.use("/ide/src", express.static(path.normalize(__dirname + "/../assets/ace-build/src")));
+    server.use("/ide/css", express.static(path.normalize(__dirname + "/../assets/css")));
+    server.use("/ide/js", express.static(path.normalize(__dirname + "/../assets/js")));
     server.use(express.session({
         secret : "k1X><?>>CJ9vXOJgWGwPbcsjVn=uV:zHvk8!geagC<nB<0aAAfX5C<5gmsB>",
         store  : options.session_store
@@ -68,9 +68,9 @@ server.configure("test", function(){
 // If NODE_ENV=staging
 // let's use the minified version of our custom ace.
 server.configure("staging", function(){
-    server.use("src", express.static(path.normalize(__dirname + "/../assets/ace-build/src-min")));
-    server.use("css", express.static(path.normalize(__dirname + "/../assets/css-min")));
-    server.use("js", express.static(path.normalize(__dirname + "/../assets/js-min")));
+    server.use("/ide/src", express.static(path.normalize(__dirname + "/../assets/ace-build/src-min")));
+    server.use("/ide/css", express.static(path.normalize(__dirname + "/../assets/css-min")));
+    server.use("/ide/js", express.static(path.normalize(__dirname + "/../assets/js-min")));
     server.use(express.session({
         secret : "k1X><?>>CJ9vXOJgWGwPbcsjVn=uV:zHvk8!geagC<nB<0aAAfX5C<5gmsB>",
         // cookie : { secure : true },
@@ -81,9 +81,9 @@ server.configure("staging", function(){
 // If NODE_ENV=production
 // let's use the minified version of our custom ace.
 server.configure("production", function(){
-    server.use("src", express.static(path.normalize(__dirname + "/../assets/ace-build/src-min")));
-    server.use("css", express.static(path.normalize(__dirname + "/../assets/css-min")));
-    server.use("js", express.static(path.normalize(__dirname + "/../assets/js-min")));
+    server.use("/ide/src", express.static(path.normalize(__dirname + "/../assets/ace-build/src-min")));
+    server.use("/ide/css", express.static(path.normalize(__dirname + "/../assets/css-min")));
+    server.use("/ide/js", express.static(path.normalize(__dirname + "/../assets/js-min")));
     server.use(express.session({
         secret : "k1X><?>>CJ9vXOJgWGwPbcsjVn=uV:zHvk8!geagC<nB<0aAAfX5C<5gmsB>",
         // cookie : { secure : true },
