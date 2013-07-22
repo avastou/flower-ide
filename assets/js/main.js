@@ -67,7 +67,7 @@ define("js/main", [
     // -   base_left:          Used in the activity, is the base height of lines, for the cursor.
     main.settings.terminal_height    = 150;
     main.settings.terminal_greetings = "Welcome to Flower IDE!\n";
-    main.settings.terminal_name      = "omg";
+    main.settings.terminal_name      = "❀";
     main.settings.terminal_prompt    = "[[b;#0AF;]flower]$ ";
     main.settings.base_height        = 0;
     main.settings.base_width         = 8;
